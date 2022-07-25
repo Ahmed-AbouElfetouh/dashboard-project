@@ -1,0 +1,186 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e6ed;
+  .header-breadcrumb {
+    svg {
+      width: 10px;
+      height: 10px;
+    }
+  }
+  .header-controls {
+    display: flex;
+    align-items: center;
+    form {
+      input {
+        position: relative;
+        width: 250px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        outline: none;
+        background-color: $page_backgroungColor;
+      }
+      span {
+        position: absolute;
+        right: 120px;
+        top: 22px;
+        svg {
+          width: 14px;
+          height: 14px;
+          fill: #6e6b7b;
+        }
+      }
+    }
+    .icon {
+      position: relative;
+      margin-left: 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $main_color;
+        animation: pulse-animation 1.5s infinite;
+      }
+      > svg {
+        width: 20px;
+        height: 20px;
+        fill: $main_color;
+        cursor: pointer;
+      }
+      .dropdown-menu {
+        width: 280px;
+        position: absolute;
+        top: 45px;
+        left: -265px;
+        background-color: #fff;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
+        display: none;
+        &.show-menu {
+          display: block;
+        }
+        .dropdown-head {
+          padding: 15px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #e0e6ed;
+          p {
+            font-weight: bold;
+            font-size: 0.9rem;
+          }
+          span {
+            color: #6e6b7b;
+            font-weight: bold;
+            font-size: 0.8rem;
+          }
+        }
+        .dropdown-links {
+          li {
+            display: flex;
+            align-items: center;
+            padding: 5px 15px;
+            &:hover {
+              background-color: $page_backgroungColor;
+              .link-title {
+                p {
+                  color: $main_color;
+                }
+              }
+            }
+            &:not(:last-of-type) {
+              margin-bottom: 10px;
+            }
+            &:first-of-type {
+              > span {
+                background-color: #DDE1EF;
+                svg {
+                  fill: $main_color
+                }
+              }
+            }
+            &:nth-of-type(2) {
+              > span {
+                background-color: #DBEAE0;
+                svg {
+                  fill:#62D45E;
+                }
+              }
+            }
+            &:nth-of-type(3) {
+              > span {
+                background-color: #EBDDDF;
+                svg {
+                  fill:#EA5455;
+                }
+              }
+            }
+            &:nth-of-type(4) {
+              > span {
+                background-color: #EBE4DD;
+                svg {
+                  fill:#FF9F43;
+                }
+              }
+            }
+            &:nth-of-type(5) {
+              > span {
+                background-color: #E8FFFF;
+                svg {
+                  fill:#66D1D1;
+                }
+              }
+            }
+            > span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 20px;
+              width: 30px;
+              height: 30px;
+              border-radius: 50%;
+              svg {
+                width: 15px;
+                height: 15px;
+              }
+            }
+            .link-title {
+              p {
+                font-size: 0.9rem;
+              }
+              span {
+                color: #6e6b7b;
+                font-size: 0.7rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .profile-image {
+      max-width: 100%;
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(78, 86, 212, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 10px rgba(78, 86, 212, 0);
+  }
+}

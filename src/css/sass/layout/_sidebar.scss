@@ -1,0 +1,57 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: $slidebar_backgroungColor;
+  .sidebar-head {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-bottom: 1px solid #172340;
+    h2 {
+      color: #fff;
+      span {
+        color: $main_color;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 23px;
+      left: 200px;
+      fill: $alt_color;
+      cursor: pointer;
+    }
+  }
+  .sidebar-body {
+    padding: 15px;
+    .item {
+      margin-bottom: 20px;
+      h5 {
+        color: #fff;
+        margin-bottom: 15px;
+      }
+      a {
+        display: block;
+        &:not(:last-of-type) {
+          margin-bottom: 10px;
+        }
+        .icon {
+          fill: $alt_color;
+          transition: 0.3s ease-in-out;
+        }
+        .title {
+          color: $alt_color;
+          margin-left: 15px;
+          transition: 0.3s ease-in-out;
+        }
+        &:hover {
+          .icon {
+            fill: $main_color;
+          }
+          .title {
+            color: $main_color;
+            margin-left: 18px;
+          }
+        }
+      }
+    }
+  }
+}

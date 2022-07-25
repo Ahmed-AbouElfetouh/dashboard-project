@@ -1,0 +1,1 @@
+const notificationsIcon=document.getElementById("notifications-icon"),dropdownMenu=document.getElementById("dropdown-menu");notificationsIcon.addEventListener("click",()=>{dropdownMenu.classList.toggle("show-menu")});
