@@ -48,8 +48,8 @@ a {
   }
 }
 .page {
-  display: flex;
   .content-area {
     width: calc(100% - 240px);
+    float: right;
   }
 }
