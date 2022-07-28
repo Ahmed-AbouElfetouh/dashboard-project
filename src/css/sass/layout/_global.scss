@@ -51,5 +51,8 @@ a {
   .content-area {
     width: calc(100% - 240px);
     float: right;
+    .style {
+      padding: 25px;
+    }
   }
 }

@@ -1,0 +1,110 @@
+.emails-box {
+  display: flex;
+  height: calc(100vh - 168px);
+  background-color: #fff;
+  border: 1px solid #e0e6ed;
+  border-radius: 6px;
+  overflow-y: auto;
+  overflow-x: auto;
+  .sidebar-menu {
+    flex: 0.25;
+    border-right: 1px solid #e0e6ed;
+    .head {
+      padding: 20px;
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 6px;
+        outline: none;
+        background-color: $main_color;
+        color: #fff;
+        font-family: 'Open Sans', sans-serif;
+        cursor: pointer;
+      }
+    }
+    .messages-categories {
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 20px;
+        color: #4e5154;
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        &:not(:last-of-type) {
+          margin-bottom: 15px;
+        }
+        &.active {
+          color: $main_color;
+          border-left: 3px solid $main_color;
+        }
+        &:hover {
+          color: $main_color;
+        }
+        .category {
+          display: flex;
+          align-items: center;
+          p {
+            margin-left: 5px;
+            position: relative;
+            top: -2px;
+          }
+        }
+      }
+    }
+    .labels {
+      padding: 20px;
+      margin-top: 25px;
+      h3 {
+        color: #4e5154;
+        font-size: 0.9rem
+      }
+      ul {
+        padding: 25px;
+        li {
+          font-size: 0.9rem;
+          position: relative;
+          &:not(:last-of-type) {
+            margin-bottom: 10px;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            left: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+          }
+          &:first-of-type {
+            &::before {
+              background-color: #62D45E;
+            }
+          }
+          &:nth-of-type(2) {
+            &::before {
+              background-color: #4E56D4;
+            }
+          }
+          &:nth-of-type(3) {
+            &::before {
+              background-color: #EA5455;
+            }
+          }
+          &:last-of-type {
+            &::before {
+              background-color: #FF9F43;
+            }
+          }
+        }
+      }
+    }
+  }
+  .inbox-emails {
+    flex: 1;
+  }
+}
