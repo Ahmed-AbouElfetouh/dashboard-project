@@ -5,8 +5,9 @@
   border: 1px solid #e0e6ed;
   border-radius: 6px;
   overflow-y: auto;
-  overflow-x: auto;
+  // overflow-x: auto;
   .sidebar-menu {
+    // overflow-x: auto;
     flex: 0.25;
     border-right: 1px solid #e0e6ed;
     .head {
@@ -106,5 +107,174 @@
   }
   .inbox-emails {
     flex: 1;
+    input[type="checkbox"] {
+      appearance: none;
+      margin-right: 10px;
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      border: 1px solid #e0e6ed;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 9.5 7.5'%3E%3Cpolyline points='0.75 4.35 4.18 6.75 8.75 0.75' style='fill:none;stroke:%23fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: 50%;
+      background-size: 70%;
+      &:checked {
+        background-color: $main_color;
+        border-color: $main_color;
+      }
+    }
+    .search-area {
+      padding: 15px;
+      border-bottom: 1px solid #e0e6ed;
+      form {
+        display: flex;
+        align-items: center;
+        span {
+          height: 100%;
+          background-color: #fff;
+          color: #bfc3ce;
+          margin-right: 10px;
+        }
+        input {
+          width: 100%;
+          border: none;
+          outline: none;
+          &::placeholder {
+            color: #bfc3ce;
+          }
+        }
+      }
+    }
+    .checked-icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px;
+      border-bottom: 1px solid #e0e6ed;
+      form {
+        display: flex;
+        align-items: center;
+        label {
+          font-size: 0.9rem;
+          color: #4e5154;
+        }
+      }
+      .icons {
+        display: flex;
+        align-items: center;
+        span {
+          color: #4e5154;
+          margin-right: 6px;
+          cursor: pointer;
+        }
+      }
+    }
+    .my-emails {
+      overflow-y: auto;
+      > div {
+        padding: 15px;
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #e0e6ed;
+        }
+        .email-info {
+          display: flex;
+          justify-content: space-between;
+          .user-info {
+            display: flex;
+            .image {
+              max-width: 100%;
+              margin-right: 8px;
+              img {
+                width: 40;
+                height: 40px;
+                border-radius: 50%;
+              }
+            }
+            .name {
+              color: #4e5154;
+              h3 {
+                font-size: 0.9rem;
+              }
+              p {
+                font-size: 0.8rem;
+              }
+            }
+          }
+          .date {
+            .color {
+              margin-left: 8px;
+              margin-right: 8px;
+              width: 10px;
+              height: 10px;
+              border-radius: 50%;
+            }
+            span {
+              display: inline-block;
+              &:last-of-type {
+                color: #bfc3ce;
+                font-size: 0.8rem;
+              }
+            }
+          }
+        }
+        .meassage-content {
+          display: flex;
+          align-items: center;
+          span {
+            margin-right: 10px;
+            svg {
+              width: 18px;
+              height: 18px;
+            }
+          }
+          .the-message {
+            p {
+              position: relative;
+              top: -3px;
+              color: #bfc3ce;
+              font-size: 0.84rem;
+            }
+          }
+        }
+        &:first-of-type,
+        &:nth-of-type(4) {
+          .email-info {
+            .date {
+              .color {
+                background-color: #28C76F;
+              }
+            }
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(3) {
+          .email-info {
+            .date {
+              .color {
+                background-color: #EA5455;
+              }
+            }
+          }
+        }
+        &:nth-of-type(5) {
+          .email-info {
+            .date {
+              .color {
+                background-color: #7367F0;
+              }
+            }
+          }
+        }
+        &:nth-of-type(6) {
+          .email-info {
+            .date {
+              .color {
+                background-color: #FF9F43;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
