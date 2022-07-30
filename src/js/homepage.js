@@ -1,19 +1,3 @@
-// Select the Email-Page Varialbles
-const messageCategories = document.querySelectorAll(
-  '.emails-box .sidebar-menu .messages-categories > div',
-);
-
-if (messageCategories) {
-  messageCategories.forEach((element) => {
-    element.addEventListener('click', function() {
-      messageCategories.forEach((el) => {
-        el.classList.remove('active');
-        this.classList.add('active')
-      });
-    });
-  });
-}
-
 // Select the Home-Page Varialbles
 const theBullets = document.querySelectorAll('.controls > ul li');
 const nextBtn = document.getElementById('next');
@@ -77,11 +61,3 @@ function sliderHandler() {
   theBullets[start - 1].classList.add('active');
   addOrRemoveDisableClass();
 }
-// Select the Header Varialbles
-const notificationsIcon = document.getElementById('notifications-icon');
-const dropdownMenu = document.getElementById('dropdown-menu');
-
-// Show - Hide Notifications List
-notificationsIcon.addEventListener('click', () => {
-  dropdownMenu.classList.toggle('show-menu');
-});

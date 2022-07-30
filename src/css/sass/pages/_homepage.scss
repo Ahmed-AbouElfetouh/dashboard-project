@@ -414,6 +414,9 @@ table {
       background-color: #EBEDF3;
       color: #6e6b7b;
       cursor: pointer;
+      &.disabled {
+        opacity: 0.5;
+      }
     }
     ul {
       display: flex;

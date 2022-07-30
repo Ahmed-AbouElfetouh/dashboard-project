@@ -54,6 +54,14 @@
             margin-left: 18px;
           }
         }
+        &.active {
+          .title {
+            color: $main_color;
+          }
+          .icon {
+            fill: $main_color
+          }
+        }
       }
     }
   }

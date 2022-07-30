@@ -1,14 +1,14 @@
+.emails-container {
+  overflow-y: auto;
+}
 .emails-box {
   display: flex;
   height: calc(100vh - 168px);
   background-color: #fff;
   border: 1px solid #e0e6ed;
   border-radius: 6px;
-  overflow-y: auto;
-  // overflow-x: auto;
   .sidebar-menu {
-    // overflow-x: auto;
-    flex: 0.25;
+    width: 260px;
     border-right: 1px solid #e0e6ed;
     .head {
       padding: 20px;
@@ -170,7 +170,8 @@
       }
     }
     .my-emails {
-      overflow-y: auto;
+      height: 65vh;
+      
       > div {
         padding: 15px;
         &:not(:last-of-type) {
