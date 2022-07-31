@@ -1,5 +1,9 @@
-.emails-container {
+.emails-container,
+.sidebar-menu-container {
   overflow-y: auto;
+}
+.emails-container {
+  overflow-x: auto;
 }
 .emails-box {
   display: flex;
@@ -7,9 +11,19 @@
   background-color: #fff;
   border: 1px solid #e0e6ed;
   border-radius: 6px;
+  @media (max-width: 425px) {
+    flex-direction: column;
+    height: auto;
+  }
   .sidebar-menu {
     width: 260px;
     border-right: 1px solid #e0e6ed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    @media (max-width: 425px) {
+      width: auto;
+      border-bottom: 1px solid #e0e6ed;
+    }
     .head {
       padding: 20px;
       button {
@@ -162,16 +176,20 @@
       .icons {
         display: flex;
         align-items: center;
+        display: none;
+        &.show-hide {
+          display: block;
+        }
         span {
           color: #4e5154;
           margin-right: 6px;
           cursor: pointer;
+          
         }
       }
     }
     .my-emails {
-      height: 65vh;
-      
+      height: 60vh;
       > div {
         padding: 15px;
         &:not(:last-of-type) {

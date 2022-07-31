@@ -96,6 +96,9 @@ header {
         background-color: #fff;
         box-shadow: 0 0 24px rgba(0, 0, 0, 0.15);
         display: none;
+        @media (max-width: 320px) {
+          left: -225px;
+        }
         &.show-menu {
           display: block;
         }
