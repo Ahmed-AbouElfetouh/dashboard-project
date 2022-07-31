@@ -1,4 +1,19 @@
 header {
+  .left {
+    display: flex;
+    align-items: center;
+    .small-media {
+      display: none;
+      svg {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  }
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -6,6 +21,19 @@ header {
   background-color: #fff;
   border-bottom: 1px solid #e0e6ed;
   .header-breadcrumb {
+    @media (max-width: 768px) {
+      margin-left: 15px;
+      position: relative;
+      top: -2px;
+    }
+    p {
+      .breadcrumb-icon,
+      .breadcrumb-title {
+        @media (max-width: 425px) {
+          display: none;
+        }
+      }
+    }
     svg {
       width: 10px;
       height: 10px;
@@ -15,6 +43,9 @@ header {
     display: flex;
     align-items: center;
     form {
+      @media (max-width: 768px) {
+        display: none;
+      }
       input {
         position: relative;
         width: 250px;

@@ -7,14 +7,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: $page_backgroungColor;
 }
-ul, ol {
-    padding-right: 0;
-    padding-left: 0;
-    margin: 0;
-    list-style: none;
+ul,
+ol {
+  padding-right: 0;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 .container {
   padding-left: 15px;
@@ -22,37 +23,34 @@ a {
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 576px) {
-    .container {
-        width: 540px
-    }
+    width: 540px;
   }
   @media (min-width: 768px) {
-    .container {
-        width: 720px;
-    }
+    width: 720px;
   }
   @media (min-width: 992px) {
-    .container {
-        width: 960px;
-    }
+    width: 960px;
   }
   @media (min-width: 1200px) {
-    .container {
-        width: 1140px;
-    }
+    width: 1140px;
   }
   @media (min-width: 1400px) {
-    .container {
-        width: 1320px;
-    }
+    width: 1320px;
   }
 }
 .page {
   .content-area {
     width: calc(100% - 240px);
     float: right;
+    @media (max-width: 768px) {
+      width: 100%;
+      float: none;
+    }
     .style {
       padding: 25px;
+      @media (max-width: 425px) {
+        padding: 10px;
+      }
     }
   }
 }
