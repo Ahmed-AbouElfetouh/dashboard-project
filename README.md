@@ -6,6 +6,16 @@
 
 # Dashboard
 
+I built this project using (Pug JS, SASS, JavaScript and Gulp JS).
+
+So What you will find in this project? :
+
+- Professional structure.
+- Fancy Design.
+- This website is a multiple pages website.
+- Website is fully responsive by [Media Queries].
+
+
 ## For Live Preview [Click Here](https://ahmed-abouelfetouh.github.io/dashboard/)
 
 
